@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Kelime Oyunu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+</head>
+<body>
+    <h1>Kelime Tahmin Oyununa Hoş Geldin</h1>
+    <form method="POST">
+        <label for="kategori">Kategori Seç:</label>
+        <select name="kategori" required>
+            {% for kategori in kategoriler %}
+                <option value="{{ kategori }}">{{ kategori }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Başla</button>
+    </form>
+</body>
+</html>

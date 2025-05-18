@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+        <meta charset="UTF-8">
+        <title>Oyun</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h2>Kelime: {{ kelime | join(" ") }}</h2>
+    <p>İpucu: {{ ipucu }}</p>
+    <p>Kalan Hak: {{ hak }} | Skor: {{ skor }}</p>
+
+    {% if mesaj %}
+        <p><strong>{{ mesaj }}</strong></p>
+    {% endif %}
+
+    <form method="POST">
+        <input type="text" name="tahmin" placeholder="Harf ya da kelime gir" required>
+        <button type="submit">Tahmin Et</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Sonuç</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Oyun Bitti!</h1>
+    <h2>Sonuç: {{ durum | upper }}</h2>
+    <p>Doğru Kelime: <strong>{{ kelime }}</strong></p>
+    <p>Toplam Skor: <strong>{{ skor }}</strong></p>
+
+    <a href="{{ url_for('index') }}">Yeniden Oyna</a>
+</body>
+</html>
